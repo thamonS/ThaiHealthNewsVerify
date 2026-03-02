@@ -1,7 +1,8 @@
+/*
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #34495e;
-    --accent-color: #00b894; /* Mint Green */
+    --accent-color: #00b894;
     --accent-blue: #0984e3;
     --bg-light: #f4f7f6;
     --gradient-primary: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
@@ -11,20 +12,20 @@ body {
     font-family: 'Sarabun', sans-serif;
     color: #444;
     background-color: var(--bg-light);
-    padding-top: 56px; /* Space for fixed navbar */
+    padding-top: 56px; 
 }
 
-/* Typography Overrides */
+
 h1, h2, h3, h4, h5, h6, .project-title-en {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Hero Section */
+
 .hero-section {
     background: var(--gradient-primary);
     padding: 120px 0 100px;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    margin-bottom: -50px; /* Overlap effect */
+    margin-bottom: -50px; 
 }
 
 .project-title-en {
@@ -36,7 +37,7 @@ h1, h2, h3, h4, h5, h6, .project-title-en {
     opacity: 0.9;
 }
 
-/* Images & Placeholders */
+
 .img-placeholder {
     width: 130px;
     height: 130px;
@@ -58,7 +59,7 @@ h1, h2, h3, h4, h5, h6, .project-title-en {
     border: 3px solid var(--accent-color);
 }
 
-/* Workflow Boxes */
+
 .workflow-box {
     transition: transform 0.3s;
     height: 100%;
@@ -69,13 +70,13 @@ h1, h2, h3, h4, h5, h6, .project-title-en {
 .border-top-primary { border-top: 4px solid var(--primary-color) !important; }
 .border-top-success { border-top: 4px solid var(--accent-color) !important; }
 
-/* Abstract Card */
+
 .paper-card {
     background: #fff;
     border-left: 5px solid var(--accent-blue);
 }
 
-/* Form Elements */
+
 textarea.form-control {
     resize: none;
     font-size: 1.1rem;
@@ -89,7 +90,7 @@ textarea.form-control:focus {
     background: var(--gradient-primary);
 }
 
-/* Result Styles */
+
 .alert-success-custom {
     background-color: #d1e7dd;
     color: #0f5132;
@@ -106,7 +107,7 @@ textarea.form-control:focus {
     border-left: 4px solid #ddd;
 }
 
-/* Animations */
+
 .skeleton-line {
     height: 10px;
     background: #e0e0e0;
@@ -129,3 +130,134 @@ textarea.form-control:focus {
 .section-padding {
     padding: 60px 0;
 }
+*/
+
+
+
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.result-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.hidden {
+    display: none;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.status-true { background: #e8f5e9; color: #2e7d32; }
+.status-false { background: #ffebee; color: #c62828; }
+.status-uncertain { background: #fff3e0; color: #ef6c00; }
+
+.analysis {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.sources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sources li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+/* Add this to your existing style.css */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden { display: none !important; }
